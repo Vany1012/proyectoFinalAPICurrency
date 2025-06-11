@@ -1,0 +1,12 @@
+@media (max-width: 768px){
+    *{
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    }
+    #titulo{
+        font-size: 10vw;
+        margin-top: 15vh;
+    }
+}

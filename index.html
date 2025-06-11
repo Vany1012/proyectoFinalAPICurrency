@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleMovil.css">
+    <link rel="stylesheet" href="css/styleTablet.css">
     <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Divizas</title>
 </head>
 <body>
-    <div id="divisa-origen">
-        <label for="lb-divisa-origen">Selecciona una divisa</label>
-        <input
+    <h1 id="titulo">Conversor de divisas</h1>
+    <main id="contenedor-principal">
+        <div id="divisa-origen">
+            <input
             type="number"
             name="divisa1"
             id="ip-cantidad"
             placeholder=""
-        />
-        <select id="sl-divisa-origen"></select>
-    </div>
-    <div id="divisa-destino">
-        <label for="lb-divisa-destino">Selecciona una divisa</label>
-        <select id="sl-divisa-destino"></select>
-        <label for="conversion" id="lb-conversion"></label>
-    </div>
-
-    <div id="boton">
-        <button id="btn-convertir">Convertir</button>
-
-    </div>
+            />
+            <label for="lb-divisa-origen">Selecciona una divisa</label>
+            <select id="sl-divisa-origen"></select>
+        </div>
+        <div id="divisa-destino">
+            <label for="lb-divisa-destino">Selecciona una divisa</label>
+            <select id="sl-divisa-destino"></select>
+            <label for="conversion" id="lb-conversion"></label>
+        </div>
+        
+        <div id="boton">
+            <button id="btn-convertir">Convertir</button>
+            
+        </div>
+    </main>
 </body>
 </html>

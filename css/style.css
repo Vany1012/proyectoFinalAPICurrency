@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    align-content: center;
+    align-items:center;
+    background-color: #203500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#titulo{
+    color: white;
+    font-size: 10vh;
+    margin-top: 20vh;
+}
+#contenedor-principal{
+    background-color: #96ac60;
+    border-radius: 10px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 60);
+    margin-top: 5vh;
+    padding: 5vh;
+    text-align: center;
+}
+#divisa-origen{
+    margin-bottom: 3vh;
+    text-align: center;
+}
+#divisa-destino{
+    margin-bottom: 3vh;
+    text-align: left;
+}
+#boton{
+    text-align: center;
+}
+#btn-convertir{
+    background-color: #dda15e;
+    border-radius: 10px;
+    padding: 1vh;
+}

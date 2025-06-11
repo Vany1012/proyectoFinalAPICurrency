@@ -1,0 +1,23 @@
+@media (max-width: 480px){
+    *{
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    }
+    #titulo{
+        font-size: 10vw;
+        margin-top: 15vh;
+    }
+    
+    #divisa-origen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #divisa-destino{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

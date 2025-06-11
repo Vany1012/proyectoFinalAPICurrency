@@ -22,7 +22,8 @@ window.onload = (e) => {
     })
 
     function insertarMonedas(divisas){
-        console.log(divisas);
+        divisaOrigen.innerHTML = "";
+        divisaDestino.innerHTML = "";
         divisas.forEach(divisa => {
           let divisa1 = document.createElement('option');
           let divisa2 = document.createElement('option');
@@ -40,20 +41,29 @@ window.onload = (e) => {
     };
 
     function convertir() {
-    let from = divisaOrigen.value;
-    let to = divisaDestino.value;
-    console.log(from, to)
-    let cantidadValor = parseFloat(cantidad.value);
-    fetch(`https://api.unirateapi.com/api/convert?api_key=78YNDiuCjL98U2Th1tShGObKGUq2DTCfZtVkcl8rurAzEsxcnWeUevsbppMTaQHO&amount=${cantidadValor}&from=${from}&to=${to}`)
-        .then((response) => {
-            console.log('Datos de conversión recibidos:', response);
-            return response.json();
-        })
-        .then((data) => {
-        console.log('Datos de la respuesta "conversión"',data);
-        resultado.innerText = `${data.result}`
-        })
-    };
+        let cantidadValor = parseFloat(cantidad.value);
+        if(isNaN(cantidadValor)){
+            alert('Ingrese una cantidad para realizar la conversión');
+            resultado.innerText = " ";
+        }
+        else if(cantidadValor < 0){
+            alert('Ingresa una cantidad positiva para poder realizar la conversión');
+            resultado.innerText = " ";
+        }
+        else{
+            let from = divisaOrigen.value;
+            let to = divisaDestino.value;
+            fetch(`https://api.unirateapi.com/api/convert?api_key=78YNDiuCjL98U2Th1tShGObKGUq2DTCfZtVkcl8rurAzEsxcnWeUevsbppMTaQHO&amount=${cantidadValor}&from=${from}&to=${to}`)
+            .then((response) => {
+                console.log('Datos de conversión recibidos:', response);
+                return response.json();
+            })
+            .then((data) => {
+                console.log('Datos de la respuesta "conversión"',data);
+                resultado.innerText = `${data.result.toFixed(4)}`;
+            })
+        };
+        };
 
     btnConvertir.addEventListener('click', convertir);
   };
