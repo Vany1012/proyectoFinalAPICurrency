@@ -66,4 +66,10 @@ window.onload = (e) => {
         };
 
     btnConvertir.addEventListener('click', convertir);
+    cantidad.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            convertir();
+        }
+    });
   };
